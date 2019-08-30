@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Leveringsinformatie xmlns="http://www.kadaster.nl/schemas/klic/leveringsinformatie/v20180418" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2">
+	<version>2.2</version>
+	<bijlagePerLevering>
+		<soortBijlage>achtergrondkaart</soortBijlage>
+		<bestandLocatie>bronnen/GB_19G005924.png</bestandLocatie>
+		<bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PNG"/>
+		<bestandIdentificator>GB_19G005924</bestandIdentificator>
+	</bijlagePerLevering>
+	<bijlagePerLevering>
+		<soortBijlage>leveringsbrief</soortBijlage>
+		<bestandLocatie>LI_19G005924_1.pdf</bestandLocatie>
+		<bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+		<bestandIdentificator>LI_19G005924_1</bestandIdentificator>
+	</bijlagePerLevering>
+	<bijlagePerLevering>
+		<soortBijlage>gebiedsinformatieLevering</soortBijlage>
+		<bestandLocatie>GI_gebiedsinformatielevering_19G005924_1.xml</bestandLocatie>
+		<bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/XML"/>
+		<bestandIdentificator>GI_gebiedsinformatielevering_19G005924_1</bestandIdentificator>
+	</bijlagePerLevering>
+	<pngFormaat>
+		<omsluitendeRechthoek>
+			<gml:Envelope srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
+				<gml:lowerCorner>190502.0 351237.0</gml:lowerCorner>
+				<gml:upperCorner>191002.0 351735.0</gml:upperCorner>
+			</gml:Envelope>
+		</omsluitendeRechthoek>
+		<pixelsBreed>7000</pixelsBreed>
+		<pixelsHoog>6972</pixelsHoog>
+	</pngFormaat>
+	<belanghebbende>
+		<bronhoudercode>KL1031</bronhoudercode>
+		<beheerdersinformatieVersie>IMKL1.2</beheerdersinformatieVersie>
+		<beheerdersinformatie>
+			<thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/gasLageDruk"/>
+			<eisVoorzorgmaatregel>false</eisVoorzorgmaatregel>
+		</beheerdersinformatie>
+		<beheerdersinformatie>
+			<thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/laagspanning"/>
+			<eisVoorzorgmaatregel>false</eisVoorzorgmaatregel>
+		</beheerdersinformatie>
+		<beheerdersinformatie>
+			<thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/gasHogeDruk"/>
+			<eisVoorzorgmaatregel>true</eisVoorzorgmaatregel>
+			<themabijlagePerNetbeheerder>
+				<soortBijlage>eisVoorzorgsmaatregel</soortBijlage>
+				<bestandLocatie>bronnen/KL1031/nl.imkl-KL1031_19G005924.EVTYPE1.bf32fd60-6a14-4b78-aaad-d771f03200b7_gasHogeDruk.pdf</bestandLocatie>
+				<bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+				<bestandIdentificator>nl.imkl-KL1031.EVTYPE1.bf32fd60-6a14-4b78-aaad-d771f03200b7_gasHogeDruk</bestandIdentificator>
+			</themabijlagePerNetbeheerder>
+		</beheerdersinformatie>
+		<beheerdersinformatie>
+			<thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/middenspanning"/>
+			<eisVoorzorgmaatregel>true</eisVoorzorgmaatregel>
+			<themabijlagePerNetbeheerder>
+				<soortBijlage>eisVoorzorgsmaatregel</soortBijlage>
+				<bestandLocatie>bronnen/KL1031/nl.imkl-KL1031_19G005924.EVTYPE4.f59ca70a-140a-4928-bb64-254d9ea3a5b9_middenspanning.pdf</bestandLocatie>
+				<bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+				<bestandIdentificator>nl.imkl-KL1031.EVTYPE4.f59ca70a-140a-4928-bb64-254d9ea3a5b9_middenspanning</bestandIdentificator>
+			</themabijlagePerNetbeheerder>
+		</beheerdersinformatie>
+	</belanghebbende>
+	<belanghebbende>
+		<bronhoudercode>KL1011</bronhoudercode>
+		<beheerdersinformatieVersie>IMKL1.2</beheerdersinformatieVersie>
+		<bijlagePerNetbeheerder>
+			<soortBijlage>algemeen</soortBijlage>
+			<bestandLocatie>bronnen/KL1011/nl.imkl-KL1011_19G005924.DocumentTooBig_Algemeen_033dcce1_2ac2_499d_8c11_54a06fb2d4c6.pdf</bestandLocatie>
+			<bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+			<bestandIdentificator>nl.imkl-KL1011.DocumentTooBig_Algemeen_033dcce1_2ac2_499d_8c11_54a06fb2d4c6</bestandIdentificator>
+		</bijlagePerNetbeheerder>
+		<beheerdersinformatie>
+			<thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/datatransport"/>
+			<eisVoorzorgmaatregel>false</eisVoorzorgmaatregel>
+		</beheerdersinformatie>
+	</belanghebbende>
+	<belanghebbende>
+		<bronhoudercode>KL1110</bronhoudercode>
+		<beheerdersinformatieVersie>IMKL1.2</beheerdersinformatieVersie>
+		<beheerdersinformatie>
+			<thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/water"/>
+			<eisVoorzorgmaatregel>false</eisVoorzorgmaatregel>
+		</beheerdersinformatie>
+	</belanghebbende>
+	<belanghebbende>
+		<bronhoudercode>GM1641</bronhoudercode>
+		<beheerdersinformatieVersie>IMKL1.2</beheerdersinformatieVersie>
+		<beheerdersinformatie>
+			<thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/rioolVrijverval"/>
+			<eisVoorzorgmaatregel>false</eisVoorzorgmaatregel>
+		</beheerdersinformatie>
+	</belanghebbende>
+	<belanghebbende>
+		<bronhoudercode>KL1021</bronhoudercode>
+		<beheerdersinformatieVersie>IMKL1.2</beheerdersinformatieVersie>
+		<bijlagePerNetbeheerder>
+			<soortBijlage>algemeen</soortBijlage>
+			<bestandLocatie>bronnen/KL1021/nl.imkl-KL1021_19G005924.BijlageAlgemeen_1_0.pdf</bestandLocatie>
+			<bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+			<bestandIdentificator>nl.imkl-KL1021.BijlageAlgemeen_1_0</bestandIdentificator>
+		</bijlagePerNetbeheerder>
+		<beheerdersinformatie>
+			<thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/buisleidingGevaarlijkeInhoud"/>
+			<eisVoorzorgmaatregel>true</eisVoorzorgmaatregel>
+			<themabijlagePerNetbeheerder>
+				<soortBijlage>eisVoorzorgsmaatregel</soortBijlage>
+				<bestandLocatie>bronnen/KL1021/nl.imkl-KL1021_19G005924.EV_buisGevaarlijkeInhoud_EV_buisleidingGevaarlijkeInhoud.pdf</bestandLocatie>
+				<bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+				<bestandIdentificator>nl.imkl-KL1021.EV_buisGevaarlijkeInhoud_EV_buisleidingGevaarlijkeInhoud</bestandIdentificator>
+			</themabijlagePerNetbeheerder>
+		</beheerdersinformatie>
+		<beheerdersinformatie>
+			<thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/overig"/>
+			<eisVoorzorgmaatregel>false</eisVoorzorgmaatregel>
+		</beheerdersinformatie>
+	</belanghebbende>
+	<belanghebbende>
+		<bronhoudercode>KL1052</bronhoudercode>
+		<beheerdersinformatieVersie>IMKL1.2</beheerdersinformatieVersie>
+		<beheerdersinformatie>
+			<thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/landelijkHoogspanningsnet"/>
+			<eisVoorzorgmaatregel>false</eisVoorzorgmaatregel>
+		</beheerdersinformatie>
+	</belanghebbende>
+</Leveringsinformatie>

@@ -1,0 +1,208 @@
+<div id="skip-link">
+    <a href="#main" class="element-invisible element-focusable" role="link">Skip to main content</a>
+</div>
+<div class="rovio-toolbar"></div>
+<header id="header" role="banner" class="headroom headroom--not-bottom headroom--pinned headroom--top">
+    <span id="logo">
+    <a href="/" title="Rovio.com" rel="home">
+      <img src="http://www.rovio.com/sites/all/themes/custom/rovio/logo.svg" alt="Rovio.com Logo"> </a>
+  </span>
+    <div id="block-menu-menu-secondary-menu" class="block block-menu secondary-menu">
+
+
+        <div class="content">
+            <ul class="menu">
+                <li class="first leaf search" (click)="toogleSearch('search-open')"><span class="nolink">Search</span></li>
+                <li class="last leaf menu-toggle" (click)="toogleNavigation('navigation-open')"><span class="nolink">Menu
+            toggle</span></li>
+            </ul>
+        </div>
+    </div>
+    <nav id="navigation-level-1">
+        <div id="block-menu-block-1" class="block block-menu-block main-menu-level-1">
+
+
+            <div class="content">
+                <div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-1">
+                    <ul class="menu">
+                        <!-- <li class="first leaf active menu-mlid-984"><a href="javascript:void(0)" class="active">Home</a></li> -->
+                        <li class="leaf has-children" *ngFor="let item of mainMenu">
+                            <a href="javascript:void(0)" [ngClass]="{ 'active': item.active, 'active-trail': item.active}" title="{{item.name}}" (click)="selectTab(item)">{{item.name}}</a>
+                        </li>
+                        <li class="last leaf menu-mlid-708"><a href="https://support.rovio.com/" title="Support" target="_blank">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav id="navigation-level-2" class="main-menu-level-2">
+        <div id="block-menu-block-2" class="block block-menu-block main-menu-level-2">
+            <div class="content" *ngFor="let item of mainMenu">
+                <div *ngIf="item.active" class="news menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-2">
+                    <ul class="menu">
+                        <li class="first leaf" *ngFor="let child of item.child">
+                            <a href="javascript:void(0)" (click)="selectTab(child)" [ngClass]="{ 'active': child.active, 'active-trail': child.active}" title="{{child.name}}">{{child.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content" *ngIf="subMenu[0].active">
+                <div class="menu-block-wrapper menu-block-2 menu-name-menu-footer-menu parent-mlid-0 menu-level-2">
+                    <ul class="menu">
+                        <li class="first last leaf">
+                            <a href="javascript:void(0)" (click)="selectTab(subMenu[0].child[0])" [ngClass]="{ 'active': subMenu[0].child[0].active, 'active-trail': subMenu[0].child[0].active}" title="Leadership team">Leadership team</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navigation">
+        <div class="wrap">
+            <div id="block-menu-block-5" class="block block-menu-block toggle-menu">
+                <div class="content">
+                    <div class="menu-block-wrapper menu-block-5 menu-name-main-menu parent-mlid-0 menu-level-1">
+                        <ul class="menu">
+                            <li class="first leaf"><a href="/" [ngClass]="{ 'active': mainTab}">Home</a></li>
+                            <li class="expanded" *ngFor="let item of mainMenu">
+                                <a href="javascript:void(0)" (click)="selectTab(item)" title="{{item.name}}" [ngClass]="{ 'active': item.active}">{{item.name}}</a>
+                                <ul class="menu">
+                                    <li class="first leaf" *ngFor="let subitem of item.child">
+                                        <a href="javascript:void(0)" (click)="selectTab(subitem)" title="{{subitem.name}}" [ngClass]="{ 'active': subitem.active}">{{subitem.name}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="last leaf menu-mlid-708"><a href="https://support.rovio.com/" title="Support" target="_blank">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="block-menu-block-6" class="block block-menu-block toggle-menu">
+                <div class="content">
+                    <div class="menu-block-wrapper menu-block-6 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+                        <ul class="menu">
+                            <li class="first expanded" *ngFor="let item of subMenu">
+                                <a href="javascript:void(0)" (click)="selectTab(item)" [ngClass]="{ 'active': item.active}">{{item.name}}</a>
+                                <ul class="menu">
+                                    <li class="first last leaf" *ngFor="let subitem of item.child">
+                                        <a href="javascript:void(0)" (click)="selectTab(subitem)" title="{{subitem.name}}" [ngClass]="{ 'active': subitem.active}">{{subitem.name}}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="block-locale-language-content" class="block block-locale">
+
+                <h2>Languages</h2>
+
+                <div class="content">
+                    <ul class="language-switcher-locale-url">
+                        <li class="zh-hans first"><a href="/zh-hans" class="language-link" xml:lang="zh-hans" hreflang="zh-hans">简体中文</a></li>
+                        <li class="en active"><a href="/" class="language-link active" xml:lang="en" hreflang="en">English</a></li>
+                        <li class="fi last"><a href="/fi" class="language-link" xml:lang="fi" hreflang="fi">Suomi</a></li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+    </nav>
+    <nav class="mobile-navigation">
+        <div class="wrap">
+            <!-- <div id="block-feature-rovio-sitewide-block-and-layout-language-content-1" class="block block-feature-rovio-sitewide-block-and-layout">
+
+                <h2>Languages</h2>
+
+                <div class="content">
+                    <ul class="language-switcher-locale-url">
+                        <li class="zh-hans first"><a href="/zh-hans/investors-releases-and-publications" class="language-link" xml:lang="zh-hans" hreflang="zh-hans">简体中文</a></li>
+                        <li class="en active"><a href="/investors/releases-and-publications" class="language-link active" xml:lang="en" hreflang="en">English</a></li>
+                        <li class="fi last"><a href="/fi/sijoittajat/tiedotteet-ja-julkaisut" class="language-link" xml:lang="fi" hreflang="fi">Suomi</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div id="block-menu-block-7" class="block block-menu-block mobile-menu">
+                <div class="content">
+                    <div class="menu-block-wrapper menu-block-7 menu-name-main-menu parent-mlid-0 menu-level-1">
+                        <ul class="menu">
+                            <li class="first leaf"><a href="/" [ngClass]="{ 'active': mainTab, 'active-trail': mainTab}">Home</a></li>
+                            <li class="expanded" [ngClass]="{ 'open': item.toggleChild}" *ngFor="let item of mainMenu">
+                                <span class="nav-group-toggle" (click)="toggleChild(item)"></span>
+                                <a href="javascript:void(0)" (click)="selectTab(item)" [ngClass]="{ 'active': item.active, 'active-trail': item.active}" title="{{item.name}}">{{item.name}}</a>
+                                <ul class="menu">
+                                    <li class="first leaf" *ngFor="let subitem of item.child">
+                                        <a href="javascript:void(0)" (click)="selectTab(subitem)" [ngClass]="{ 'active': subitem.active, 'active-trail': subitem.active}" title="{{subitem.name}}">{{subitem.name}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="last leaf menu-mlid-708"><a href="https://support.rovio.com/" title="Support" target="_blank">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="block-menu-block-8" class="block block-menu-block mobile-menu">
+                <div class="content">
+                    <div class="menu-block-wrapper menu-block-8 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+                        <ul class="menu">
+                            <li class="first expanded" [ngClass]="{ 'open': item.toggleChild}" *ngFor="let item of subMenu">
+                                <span class="nav-group-toggle" (click)="toggleChild(item)"></span>
+                                <a href="javascript:void(0)" (click)="selectTab(item)" [ngClass]="{ 'active': item.active, 'active-trail': item.active}" title="{{item.name}}">{{item.name}}</a>
+                                <ul class="menu">
+                                    <li class="first last leaf" *ngFor="let subitem of item.child">
+                                        <a href="javascript:void(0)" (click)="selectTab(subitem)" [ngClass]="{ 'active': subitem.active, 'active-trail': subitem.active}" title="{{subitem.name}}">{{subitem.name}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="search">
+        <div class="wrap">
+            <div id="block-views-exp-search-page" class="block block-views">
+
+
+                <div class="content">
+                    <form action="/search" method="get" id="views-exposed-form-search-page" accept-charset="UTF-8">
+                        <div>
+                            <div class="views-exposed-form">
+                                <div class="views-exposed-widgets clearfix">
+                                    <div id="edit-keywords-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext">
+                                        <div class="views-widget">
+                                            <div class="form-item form-type-textfield form-item-keywords" role="search">
+                                                <input class="auto_submit form-text form-autocomplete" data-search-api-autocomplete-search="search_api_views_search" type="text" id="edit-keywords" name="keywords" value="" size="30" maxlength="128" autocomplete="OFF" aria-autocomplete="list" role="combobox">
+                                                <input type="hidden" id="edit-keywords-autocomplete" value="http://www.rovio.com/index.php?q=search_api_autocomplete/search_api_views_search/-" disabled="disabled" class="autocomplete autocomplete-processed">
+                                                <span class="element-invisible" aria-live="assertive" id="edit-keywords-autocomplete-aria-live"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="views-exposed-widget views-submit-button">
+                                        <input type="submit" id="edit-submit-search" name="" value="Search" class="form-submit"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="block-search-api-stats-block-rovio-solr-node-index" class="block block-search-api-stats-block">
+
+                <h2>Popular searches</h2>
+
+                <div class="content">
+                    <ul class="search-api-stats-top-phrases">
+                        <li class="angry birds first"><a href="/search?keywords=angry%20birds">angry birds</a></li>
+                        <li class="angry"><a href="/search?keywords=angry">angry</a></li>
+                        <li class="angry birds star"><a href="/search?keywords=angry%20birds%20star">angry birds star</a></li>
+                        <li class="games"><a href="/search?keywords=games">games</a></li>
+                        <li class="rovio"><a href="/search?keywords=rovio">rovio</a></li>
+                        <li class="angry stella"><a href="/search?keywords=angry%20stella">angry stella</a></li>
+                        <li class="angrybird"><a href="/search?keywords=angrybird">angrybird</a></li>
+                        <li class="bad piggies last"><a href="/search?keywords=bad%20piggies">bad piggies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="header-spacer">&nbsp;</div>
